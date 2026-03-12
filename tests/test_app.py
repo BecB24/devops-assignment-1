@@ -34,3 +34,6 @@ def test_grams_to_pounds():
     # if this test fails, the function grams_to_pounds is incorrect
     assert pytest.approx(grams_to_pounds(1000), rel=1e-5) == 2.20462
 
+def test_main_conversion_function_pounds_to_kg():
+    from app import main_conversion_function
+    assert main_conversion_function(2.20462, 'pounds', 'kg') == 1
